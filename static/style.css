@@ -27,7 +27,16 @@ form input{
     border-radius: 15px;
 
 }
-button{
+table,th{
+    margin-top: 10px;
+    border: 2px solid crimson;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+.button_enviar{
     padding: 10px;
     background-color: rgb(121, 1, 1);
     margin-top: 15px;
@@ -35,4 +44,14 @@ button{
     border-radius: 15px;
     color: aliceblue;
     cursor: pointer;
+}
+.boton_borrar{
+      padding: 10px;
+      background-color: rgb(121, 1, 1);
+      text-decoration: none;
+      border: none;
+      border-radius: 20px;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+
 }
