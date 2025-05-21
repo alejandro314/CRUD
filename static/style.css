@@ -29,7 +29,7 @@ form input{
 }
 table,th{
     margin-top: 10px;
-    border: 2px solid crimson;
+    border: 2px solid rgb(121, 1, 1);
 }
 a{
     text-decoration: none;
