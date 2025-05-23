@@ -13,9 +13,9 @@ def crud():
     global id_contador
 
     if request.method=="POST": #si accedemos a la ruta con datos en el formulario
-        nombre = request.form.get("nombre")
-        email = request.form.get("email") 
-        usuarios.append({"id":id_contador,"username":nombre,"email":email})#insertando usuario
+        nombre = request.form.get("nombre_usuario")
+        correo = request.form.get("correo_usuario") 
+        usuarios.append({"id":id_contador,"nombre_usuario":nombre,"correo_usuario":correo})#insertando usuario
         id_contador+=1
         return redirect(url_for("crud"))
 
@@ -37,6 +37,7 @@ def crud():
 
 @app.route("/update/<int:id>", methods=["GET","POST"]) #ruta con parametros
 def update(id):
+    print(usuarios)
     
     estudiante_a_editar=""
     
@@ -49,8 +50,8 @@ def update(id):
             break
     if request.method=="POST":
         #TODO:actualizar el diccionario del estudiante con los datos del formulario
-        estudiante_a_editar("username")=request.form.get("nombre")
-        estudiante_a_editar("email")=request.form.get("email")
+        estudiante_a_editar("nombre_usuario")=request.form.get("nombre")
+        estudiante_a_editar("correo_usuario")=request.form.get("correo")
         return redirect(url_for("crud"))
     
     #si despuies de recorrer toda la lista, no encontramos el id entregado

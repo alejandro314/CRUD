@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    <title>Actualizar</title>
+    <title>Actualizacion</title>
 </head>
 <body>
     <div class="section">
         <form method="post">
             <h3>Formulario para actualizar</h3>
-            <input type="number" name="id"      value="{{estudiante_a_editar.id}}"                     readonly>
-            <input type="texto"  name="nombre"  value="{{estudiante_a_editar.username}}"id="" required>
-            <input type="email"  name="email"   value="{{estudiante_a_editar.email}}" id=""        required>
-            <button class="button_enviar" type="submit">Actualizar Usuario </button>
+            <input type="texto" name="id" id="" value="{{estudiante_a_editar.id}}" readonly>
+            <input type="texto" name="nombre" id="" value="{{estudiante_a_editar.nombre_usuario}}" required>
+            <input type="email" name="email" id="" value="{{estudiante_a_editar.correo_usuario}}" required>
+            <button class="botones" type="submit">Actualizar Usuario </button><br><br>
         </form>
+        <h3><a href="/">regresar</a></h3>
 
     </div>
 </body>
